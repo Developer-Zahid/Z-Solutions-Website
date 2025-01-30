@@ -1,0 +1,50 @@
+@use './function' as *;
+
+// SCSS Variable's
+$scss-font-primary: "Figtree", serif;
+$font-primary: var(--bs-body-font-family);
+$scss-font-secondary: "Archivo Black", serif;
+$font-secondary: var(--bs-font-secondary);
+
+$scss-color-primary:#000738;
+$scss-color-primary-rgb: toRGB($scss-color-primary);
+$color-primary: var(--bs-primary);
+$color-primary-rgb: var(--bs-primary-rgb);
+
+$scss-color-secondary:#19ABD0;
+$scss-color-secondary-rgb: toRGB($scss-color-secondary);
+$color-secondary: var(--bs-secondary);
+$color-secondary-rgb: var(--bs-secondary-rgb);
+
+$scss-color-tertiary:#2A307C;
+$scss-color-tertiary-rgb: toRGB($scss-color-tertiary);
+$color-tertiary: var(--bs-tertiary);
+$color-tertiary-rgb: var(--bs-tertiary-rgb);
+
+$scss-color-text: #555555;
+$color-text: var(--bs-body-color);
+
+$scss-color-nav-link: #4D4D4D;
+$color-nav-link: var(--bs-nav-link-color);
+
+
+$color-black:#000000;
+$color-white:#ffffff;
+
+$gutter: 24px;
+
+
+// CSS Variable's
+:root{
+	--bs-body-font-family: #{$scss-font-primary};
+	--bs-font-secondary: #{$scss-font-secondary};
+	--bs-body-color: #{$scss-color-text};
+	--bs-primary: #{$scss-color-primary};
+	--bs-primary-rgb: #{$scss-color-primary-rgb};
+	--bs-secondary: #{$scss-color-secondary};
+	--bs-secondary-rgb: #{$scss-color-secondary-rgb};
+	--bs-tertiary: #{$scss-color-tertiary};
+	--bs-tertiary-rgb: #{$scss-color-tertiary-rgb};
+	--bs-nav-link-color: #{$scss-color-nav-link};
+	--bs-link-color: inherit;
+}

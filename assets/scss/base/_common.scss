@@ -1,0 +1,117 @@
+@use '../abstracts' as *;
+
+/* Reset CSS */
+*{
+	-webkit-tap-highlight-color: transparent;
+}
+
+html,
+body
+{
+	scroll-behavior: smooth;
+}
+
+body {
+	overflow-x: clip;
+}
+
+a,
+button,
+input,
+select,
+textarea
+{
+	font: inherit;
+	word-wrap: anywhere;
+}
+
+a,
+button,
+input,
+select,
+textarea
+{
+	color: inherit;
+}
+
+a,
+a:hover,
+a:focus,
+a:active
+{
+	text-decoration: none;
+}
+
+img,
+svg
+{
+	display: block;
+	max-width: 100%;
+}
+
+img{
+	object-fit: cover;
+}
+
+.user-select-none{
+	pointer-events: none;
+}
+
+.list-inline{
+	font-size: 0;
+	&-item{
+		font-size: 1rem;
+	}
+}
+
+.bg-tertiary {
+	background-color: $color-tertiary;
+}
+
+/* Common Section Gap Style */
+.section-gap{
+	--_section-gap: #{toRem(30)};
+	@include min-lg{
+		--_section-gap: #{toRem(50)};
+	}
+	@include min-xl{
+		--_section-gap: #{toRem(70)};
+	}
+	
+	padding: var(--_section-gap) 0;
+	&--fix{
+		padding-bottom: calc(var(--_section-gap) - $gutter);
+	}
+}
+
+/* Common Section Heading Style */
+.section-header{
+	color: $color-primary;
+	text-align: center;
+	margin-bottom: toRem(20);
+
+	&__title{
+		font-size: toRem(30);
+		@include min-lg{
+			font-size: toRem(40);
+		}
+		@extend %fw-bold;
+	}
+}
+
+.match-height > [class*="col"]{
+	display: flex;
+	flex-flow: column;
+}
+
+.match-height > [class*="col"] > *{
+	flex: 1 1 auto;
+}
+
+.text-underline {
+	text-decoration: underline;
+
+	&-hover{
+		@extend %text-underline-hover;
+	}
+}
