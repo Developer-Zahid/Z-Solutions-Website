@@ -1,0 +1,19 @@
+@use '../abstracts' as *;
+
+/* Section Contact Style */
+.section-contact {
+
+    &__shape {
+        width: clamp(21.875rem, 28.5987vw + 14.9041rem, 40.625rem);
+    }
+
+    &__title {
+        max-width: 16ch;
+    }
+    &__text {
+        max-width: 42ch;
+    }
+    &__icon {
+        width: toRem(45);
+    }
+}

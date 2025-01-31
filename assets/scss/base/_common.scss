@@ -19,6 +19,7 @@ a,
 button,
 input,
 select,
+option,
 textarea
 {
 	font: inherit;
@@ -49,6 +50,12 @@ svg
 	max-width: 100%;
 }
 
+h1,
+h2
+{
+	color: $color-primary;
+}
+
 img{
 	object-fit: cover;
 }
@@ -75,7 +82,7 @@ img{
 		--_section-gap: #{toRem(50)};
 	}
 	@include min-xl{
-		--_section-gap: #{toRem(70)};
+		--_section-gap: #{toRem(80)};
 	}
 	
 	padding: var(--_section-gap) 0;
@@ -114,4 +121,8 @@ img{
 	&-hover{
 		@extend %text-underline-hover;
 	}
+}
+
+.u-cover {
+	@extend %full-width;
 }

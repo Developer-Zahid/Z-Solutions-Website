@@ -1,6 +1,6 @@
 @use '../abstracts' as *;
 
-/* Header Section Style */
+/* Section Header Style */
 .navbar{
 
 	&-brand{
@@ -31,7 +31,7 @@
 	}
 	
 	.nav-link{
-		--bs-nav-link-font-size: #{toRem(18)};
+		--bs-nav-link-font-size: #{toRem(16)};
 		--bs-nav-link-font-weight: 600;
 
 		@extend %uppercase;

@@ -1,9 +1,7 @@
 @use '../abstracts' as *;
 
-/* Footer Section Style */
+/* Section Footer Style */
 .footer{
-    padding-top: toRem(60);
-    padding-bottom: toRem(60);
 
     &-brand__image {
         max-width: clamp(3.75rem, 5.9104vw + 2.3093rem, 7.625rem);

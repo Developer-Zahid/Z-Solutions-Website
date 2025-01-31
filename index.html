@@ -39,12 +39,12 @@
 	<link rel="stylesheet" href="./assets/css/style.min.css" />
 </head>
 <body>
-	<!-- Header Section -->
+	<!-- Section Header -->
 	<header class="header position-absolute top-0 start-0 end-0 bg-white">
 		<div class="container">
 			<nav class="navbar navbar-expand-lg">
 				<a class="navbar-brand" href="./">
-					<img class="navbar-brand__image" src="./assets/images/logo/logo.png" alt="Z-Solutions" loading="eager" />
+					<img class="navbar-brand__image" src="./assets/images/logo/logo.png" alt="Z-Solutions" loading="eager" fetchpriority="high" decoding="sync" />
 				</a>
 				<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
 					<i class="bi bi-list"></i>
@@ -61,7 +61,7 @@
 							<a href="#!" class="nav-link">Insights</a>
 						</li>
 						<li class="nav-item">
-							<a href="#!" class="nav-link">Contact us</a>
+							<a href="#section-contact" class="nav-link">Contact us</a>
 						</li>
 					</ul>
 				</div>
@@ -69,14 +69,106 @@
 		</div>
 	</header>
 
-	<!-- Banner Section -->
+	<!-- Section Banner -->
 	<section class="banner section-gap">
 		<div class="container">
 			<h1 class="display-2 text-center">Boilerplate</h1>
 		</div>
 	</section>
 
-	<!-- Footer Section -->
+	<!-- Section CTA -->
+	<section class="section-cta section-gap text-center position-relative">
+		<img class="u-cover" src="./assets/images/common/cta-bg.png" alt="cta background" loading="lazy" fetchpriority="low" decoding="async" />
+		<div class="container position-relative ">
+			<h2 class="display-5 fw-normal">Get To Know Construction Litigation</h2>
+			<p class="fs-4 fw-bold">Click below to review some frequently asked questions</p>
+			<a class="btn btn-primary" href="#" role="button">Learn More</a>
+		</div>
+	</section>
+
+	<!-- Section Contact -->
+	<section id="section-contact" class="section-contact section-gap position-relative">
+		<img class="section-contact__shape position-absolute bottom-0 z-n1" src="./assets/images/common/contact-shape.png" alt="logo shape" loading="lazy" fetchpriority="low" decoding="async" />
+		<div class="container py-3">
+			<div class="row align-items-center">
+				<div class="col-lg-6 mb-5 mb-lg-0">
+					<h2 class="section-contact__title display-5 fw-normal">Contact Us For More Information</h2>
+					<p class="section-contact__text fw-light text-black mb-4">We would love to assist you with your metal building needs. For more information, please contact us today.</p>
+					<address class="mb-0">
+						<ul class="nav flex-column gap-3">
+							<li class="d-flex gap-3 align-items-center">
+								<span class="section-contact__icon ratio ratio-1x1 text-white bg-secondary flex-shrink-0">
+									<span class="d-flex justify-content-center align-items-center fs-5">
+										<i class="bi bi-geo-alt-fill"></i>
+									</span>
+								</span>
+								<a href="https://maps.app.goo.gl/KM6q6TGUAdBbfYhx7" target="_blank" class="text-underline-hover fw-bold text-black">233 North Main St., Suite 8 Greenville, SC 29607</a>
+							</li>
+							<li class="d-flex gap-3 align-items-center">
+								<span class="section-contact__icon ratio ratio-1x1 text-white bg-secondary flex-shrink-0">
+									<span class="d-flex justify-content-center align-items-center fs-5">
+										<i class="bi bi-telephone-fill"></i>
+									</span>
+								</span>
+								<a href="tel:8647298900" class="text-underline-hover fw-bold text-black">Telephone: 864-729-8900</a>
+							</li>
+							<li class="d-flex gap-3 align-items-center">
+								<span class="section-contact__icon ratio ratio-1x1 text-white bg-secondary flex-shrink-0">
+									<span class="d-flex justify-content-center align-items-center fs-5">
+										<i class="bi bi-envelope-fill"></i>
+									</span>
+								</span>
+								<a href="mailto:alan@zirkelbach.com" class="text-underline-hover fw-bold text-black">Email: alan@zirkelbach.com</a>
+							</li>
+						</ul>
+					</address>
+				</div>
+				<div class="col-lg-6">
+					<form action="#!">
+						<div class="row g-3">
+							<div class="col-md-6">
+								<label for="client-type" class="form-label fw-semibold">Client Type *</label>
+								<select id="client-type" name="client-type" class="form-select" required>
+									<option selected>Attorney</option>
+									<option value="1">One</option>
+									<option value="2">Two</option>
+									<option value="3">Three</option>
+								</select>
+							</div>
+							<div class="col-md-6">
+								<label for="project-location" class="form-label fw-semibold">Project Location *</label>
+								<select id="project-location" name="project-location" class="form-select" required>
+									<option selected>Florida</option>
+									<option value="1">One</option>
+									<option value="2">Two</option>
+									<option value="3">Three</option>
+								</select>
+							</div>
+							<div class="col-12">
+								<label for="full-name" class="form-label fw-semibold">Full Name *</label>
+								<input id="full-name" name="full-name" type="text" class="form-control" required/>
+							</div>
+							<div class="col-md-6">
+								<label for="email" class="form-label fw-semibold">Email *</label>
+								<input id="email" name="email" type="text" class="form-control" required/>
+							</div>
+							<div class="col-md-6">
+								<label for="phone" class="form-label fw-semibold">Phone *</label>
+								<input id="phone" name="phone" type="text" class="form-control" required/>
+							</div>
+							<div class="mb-3">
+								<label for="message" class="form-label fw-semibold">Message *</label>
+								<textarea id="message" name="message" class="form-control" rows="5" required></textarea>
+							</div>
+						</div>
+						<button type="submit" class="btn btn-primary w-100">Submit</button>
+					</form>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<!-- Section Footer -->
 	<footer class="footer text-white">
 		<div class="footer__top bg-primary py-5">
 			<div class="container py-3">
@@ -86,7 +178,7 @@
 							<a href="./" class="footer-brand flex-shrink-0">
 								<img class="footer-brand__image" src="./assets/images/logo/logo-mark.png" alt="Z-Solutions" loading="lazy" />
 							</a>
-							<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque ornare scelerisque erat vel rutrum. Duis sem enim, tempor sed gravida imperdiet, bibendum et purus. Donec egestas lectus at sapien hendrerit non convallis magna scelerisque.</p>
+							<p class="mb-0">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque ornare scelerisque erat vel rutrum. Duis sem enim, tempor sed gravida imperdiet, bibendum et purus. Donec egestas lectus at sapien hendrerit non convallis magna scelerisque.</p>
 						</div>
 					</div>
 					<div class="col-lg-4 mb-4 mb-lg-0">
@@ -126,7 +218,7 @@
 								</li>
 								<li class="footer__list__item">
 									<a href="https://www.linkedin.com/company/z-construction-llc" title="Linkedin" target="_blank" class="footer__list__link">
-										<img src="./assets/images/icons/linkedin.png" alt="linkedin" width="30" height="30" loading="lazy" />
+										<img src="./assets/images/icons/linkedin.png" alt="linkedin" width="30" height="30" loading="lazy" fetchpriority="low" decoding="async" />
 									</a>
 								</li>
 							</ul>
@@ -136,7 +228,7 @@
 			</div>
 		</div>
 		<div class="footer__bottom bg-tertiary py-4">
-			<div class="container py-2">
+			<div class="container">
 				<div class="row">
 					<div class="col">
 						<div class="d-flex gap-3 align-items-center justify-content-between flex-wrap fw-medium flex-column flex-xl-row text-center">
@@ -155,7 +247,7 @@
 									<a class="nav-link" href="#">Sitemap</a>
 								</li>
 								<li class="nav-item">
-									<a class="nav-link" href="#">Contact Us</a>
+									<a class="nav-link" href="#section-contact">Contact Us</a>
 								</li>    
 							</ul>
 						</div>
@@ -167,8 +259,8 @@
 
 	<!-- Scroll To Top Button -->
 	<div class="scroll-top position-fixed">
-		<button type="button" class="scroll-top__btn border-0 d-inline-flex align-items-center justify-content-center">
-			<i class="fa-solid fa-chevron-up"></i>
+		<button type="button" class="scroll-top__btn border-0 d-inline-flex align-items-center justify-content-center p-0">
+			<i class="bi bi-chevron-up"></i>
 		</button>
 	</div>
 
