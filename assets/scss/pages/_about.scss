@@ -1,0 +1,30 @@
+@use '../abstracts' as *;
+
+/* Section About Us Style */
+.section-about {
+    &__media {
+        --_padding-block: #{toRem(35)};
+        
+        padding-top: var(--_padding-block);
+        padding-bottom: var(--_padding-block);
+
+        @include min-xs {
+            --_padding-block: #{toRem(60)};
+            padding-left: 70px;
+        }
+
+        &::before {
+            @extend %common-pseudo;
+            top: 0;
+            left: 0;
+            width: 50%;
+            @include min-xs {
+                width: 45%;
+            }
+            height: 100%;
+            background-color: $color-tertiary;
+            display: block;
+            z-index: -1;
+        }
+    }
+}

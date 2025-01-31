@@ -43,6 +43,10 @@ a:active
 	text-decoration: none;
 }
 
+figure {
+	margin-bottom: 0;
+}
+
 img,
 svg
 {
@@ -50,14 +54,9 @@ svg
 	max-width: 100%;
 }
 
-h1,
-h2
-{
-	color: $color-primary;
-}
-
 img{
 	object-fit: cover;
+	height: auto;
 }
 
 .user-select-none{
@@ -85,7 +84,9 @@ img{
 		--_section-gap: #{toRem(80)};
 	}
 	
-	padding: var(--_section-gap) 0;
+	padding-top: var(--_section-gap);
+	padding-bottom: var(--_section-gap);
+
 	&--fix{
 		padding-bottom: calc(var(--_section-gap) - $gutter);
 	}
@@ -125,4 +126,6 @@ img{
 
 .u-cover {
 	@extend %full-width;
+	@extend %select-none;
+	z-index: -1;
 }

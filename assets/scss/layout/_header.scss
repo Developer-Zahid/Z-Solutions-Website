@@ -1,8 +1,11 @@
 @use '../abstracts' as *;
 
 /* Section Header Style */
-.navbar{
+.header {
+	z-index: 9;
+}
 
+.navbar{
 	&-brand{
 		--bs-navbar-brand-color: #{$color-text};
 		&__image{
@@ -23,6 +26,10 @@
 		&:hover
 		{
 			color: $color-primary;
+		}
+
+		&[aria-expanded="true"] .bi::before{
+			content: '\F62A';
 		}
 	}
 

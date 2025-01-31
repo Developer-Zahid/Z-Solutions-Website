@@ -20,10 +20,6 @@
 
 	--bs-btn-active-bg: #{$color-primary};
 	--bs-btn-active-border-color: var(--bs-btn-bg);
-
-	// &:focus{
-	// 	color: inherit;
-	// }
 }
 
 .scroll-top{
@@ -34,8 +30,8 @@
 	z-index: 7;
 
 	&__btn{
-		width: toRem(50);
-		height: toRem(50);
+		width: clamp(2rem, 1.7159vw + 1.5817rem, 3.125rem);
+		aspect-ratio: 1/1;
 		font-size: 1.1rem;
 		color: $color-white;
 		background-color: $color-tertiary;

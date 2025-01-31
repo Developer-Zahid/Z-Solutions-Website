@@ -1,0 +1,17 @@
+@use '../abstracts' as *;
+
+/* Section Common Banner Style */
+.section-common-banner{
+    &__title {
+        @extend %position-relative;
+
+        &::after {
+            @extend %common-pseudo;
+            bottom: 0;
+            width: clamp(5.5rem, 6.8637vw + 3.827rem, 10rem);
+            height: clamp(.3rem, .3051vw + .2256rem, .5rem);
+            background-color: $color-secondary;
+            display: block;
+        }
+    }
+}

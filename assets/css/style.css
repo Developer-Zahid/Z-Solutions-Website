@@ -38,7 +38,7 @@ select:not(:disabled) {
   font-weight: 700;
 }
 
-.footer__block__title {
+.section-common-banner__title, .footer__block__title {
   position: relative;
 }
 
@@ -52,9 +52,16 @@ select:not(:disabled) {
   height: 100%;
 }
 
-.footer__block__title::after {
+.section-about__media::before, .section-common-banner__title::after, .footer__block__title::after {
   content: "";
   position: absolute;
+}
+
+.u-cover {
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+  pointer-events: none;
 }
 
 .footer .nav-link:hover, .footer__list__link:hover, .text-underline-hover:hover, .footer .nav-link:focus, .footer__list__link:focus, .text-underline-hover:focus {
@@ -100,20 +107,20 @@ a:active {
   text-decoration: none;
 }
 
+figure {
+  margin-bottom: 0;
+}
+
 img,
 svg {
   display: block;
   max-width: 100%;
 }
 
-h1,
-h2 {
-  color: var(--bs-primary);
-}
-
 img {
   -o-object-fit: cover;
      object-fit: cover;
+  height: auto;
 }
 
 .user-select-none {
@@ -134,7 +141,8 @@ img {
 /* Common Section Gap Style */
 .section-gap {
   --_section-gap: 1.875rem;
-  padding: var(--_section-gap) 0;
+  padding-top: var(--_section-gap);
+  padding-bottom: var(--_section-gap);
 }
 @media (min-width: 992px) {
   .section-gap {
@@ -177,6 +185,10 @@ img {
 .text-underline {
   text-decoration: underline;
 }
+.u-cover {
+  z-index: -1;
+}
+
 /* Custom Fonts */
 @font-face {
   font-family: "Figtree";
@@ -265,8 +277,8 @@ h6, .h6 {
   z-index: 7;
 }
 .scroll-top__btn {
-  width: 3.125rem;
-  height: 3.125rem;
+  width: clamp(2rem, 1.7159vw + 1.5817rem, 3.125rem);
+  aspect-ratio: 1/1;
   font-size: 1.1rem;
   color: #ffffff;
   background-color: var(--bs-tertiary);
@@ -343,6 +355,10 @@ select:focus {
   box-shadow: none;
 }
 /* Section Header Style */
+.header {
+  z-index: 9;
+}
+
 .navbar-brand {
   --bs-navbar-brand-color: var(--bs-body-color);
 }
@@ -359,6 +375,9 @@ select:focus {
 }
 .navbar-toggler[aria-expanded=true], .navbar-toggler:hover {
   color: var(--bs-primary);
+}
+.navbar-toggler[aria-expanded=true] .bi::before {
+  content: "\f62a";
 }
 .navbar-nav {
   gap: clamp(0rem, 1.5253vw - 0.3718rem, 1rem);
@@ -428,4 +447,40 @@ select:focus {
 }
 .section-contact__icon {
   width: 2.8125rem;
+}
+
+/* Section Common Banner Style */
+.section-common-banner__title::after {
+  bottom: 0;
+  width: clamp(5.5rem, 6.8637vw + 3.827rem, 10rem);
+  height: clamp(0.3rem, 0.3051vw + 0.2256rem, 0.5rem);
+  background-color: var(--bs-secondary);
+  display: block;
+}
+
+/* Section About Us Style */
+.section-about__media {
+  --_padding-block: 2.1875rem;
+  padding-top: var(--_padding-block);
+  padding-bottom: var(--_padding-block);
+}
+@media (min-width: 480px) {
+  .section-about__media {
+    --_padding-block: 3.75rem;
+    padding-left: 70px;
+  }
+}
+.section-about__media::before {
+  top: 0;
+  left: 0;
+  width: 50%;
+  height: 100%;
+  background-color: var(--bs-tertiary);
+  display: block;
+  z-index: -1;
+}
+@media (min-width: 480px) {
+  .section-about__media::before {
+    width: 45%;
+  }
 }/*# sourceMappingURL=style.css.map */

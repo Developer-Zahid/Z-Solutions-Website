@@ -27,7 +27,16 @@
     	$('body').css('--header-size', $('header').innerHeight() +'px')
 	}
 
-	// get current year
-	$('[data-target="currentYear"]').text(new Date().getFullYear())
+	/* Get Current Year */
+	$('[data-target="currentYear"]').text(new Date().getFullYear());
+	
+	/* Close Collapse on Link Click */
+	if($('.navbar-toggler').is(':visible')){
+		$('.navbar-nav .nav-link').on('click', function () {	
+			new bootstrap.Collapse('#navbarNav', {
+				hide: true
+			}) 
+		});
+	}
 
 })(jQuery)
