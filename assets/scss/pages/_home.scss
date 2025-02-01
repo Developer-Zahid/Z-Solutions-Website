@@ -79,7 +79,7 @@
     &__grid {
         display: grid;
         gap: 1px;
-        background-color: #dedede;
+        background-color: #5F6599;
 
         @include min-sm {
             grid-template-columns: 1fr 1fr;
