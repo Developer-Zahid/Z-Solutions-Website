@@ -20,6 +20,7 @@ Version: 1.00
   --bs-nav-link-color: #4D4D4D;
   --bs-link-color: inherit;
   --bs-border-radius: 0;
+  --swiper-theme-color: #19ABD0;
 }
 
 .navbar-toggler {
@@ -190,6 +191,26 @@ img {
 }
 .u-cover {
   z-index: -1;
+}
+
+.swiper {
+  --swiper-pagination-bullet-border-radius: 0;
+}
+.swiper-slide {
+  height: auto;
+}
+.swiper-button {
+  --swiper-navigation-size: 1rem;
+  --swiper-navigation-color: #ffffff;
+  --swiper-navigation-sides-offset: -2.5rem;
+  background-color: var(--bs-secondary);
+  width: 2.5rem;
+  height: auto;
+  aspect-ratio: 1/1;
+  transition: background-color 0.3s ease;
+}
+.swiper-button:hover, .swiper-button:focus-visible {
+  background-color: var(--bs-tertiary);
 }
 
 /* Custom Fonts */
@@ -461,9 +482,6 @@ select:focus {
 }
 
 /* Section Home banner Style */
-.section-home-banner .swiper-slide {
-  height: auto;
-}
 .section-home-banner__card {
   min-height: calc(80vh - var(--header-size));
   min-height: calc(80svh - var(--header-size));
@@ -481,7 +499,6 @@ select:focus {
   max-width: 24ch;
 }
 .section-home-banner__pagination {
-  --swiper-theme-color: var(--bs-secondary);
   --swiper-pagination-bullet-inactive-color: #ffffff;
   --swiper-pagination-bullet-inactive-opacity: 1;
   --swiper-pagination-bullet-border-radius: 0;
@@ -544,12 +561,21 @@ select:focus {
 }
 
 /* Section Home Blog Style */
+.section-home-blog .swiper-button {
+  --swiper-navigation-sides-offset: -3.125rem;
+}
+@media screen and (max-width: 1299px) {
+  .section-home-blog .swiper-button {
+    display: none;
+  }
+}
+
 .blog-card:hover .blog-card__title, .blog-card:focus-within .blog-card__title {
   color: var(--bs-tertiary);
 }
 .blog-card:focus-within {
   outline: 2px solid var(--bs-secondary-light);
-  outline-offset: 5px;
+  outline-offset: -2px;
 }
 
 /* Section About Us Style */

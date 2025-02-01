@@ -135,3 +135,29 @@ img{
 	@extend %select-none;
 	z-index: -1;
 }
+
+.swiper {
+	--swiper-pagination-bullet-border-radius: 0;
+
+	&-slide {
+		height: auto;
+	}
+
+	&-button {
+		--swiper-navigation-size: #{toRem(16)};
+		--swiper-navigation-color: #ffffff;
+		--swiper-navigation-sides-offset:  #{toRem(-40)};
+
+		background-color: $color-secondary;
+		width: toRem(40);
+		height: auto;
+		aspect-ratio: 1 / 1;
+		transition: background-color 0.3s ease;
+
+		&:hover,
+		&:focus-visible
+		{
+			background-color: $color-tertiary;
+		}
+	}
+}

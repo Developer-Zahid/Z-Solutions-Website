@@ -2,10 +2,6 @@
 
 /* Section Home banner Style */
 .section-home-banner {
-    .swiper-slide {
-        height: auto;
-    }
-
     &__card {
         min-height: calc(80vh - var(--header-size));
         min-height: calc(80svh - var(--header-size));
@@ -25,7 +21,6 @@
     }
 
     &__pagination {
-        --swiper-theme-color: #{$color-secondary};
         --swiper-pagination-bullet-inactive-color: #ffffff;
         --swiper-pagination-bullet-inactive-opacity: 1;
         --swiper-pagination-bullet-border-radius: 0;
@@ -98,6 +93,18 @@
 }
 
 /* Section Home Blog Style */
+.section-home-blog {
+    .swiper {
+        &-button {
+            --swiper-navigation-sides-offset:  #{toRem(-50)};
+
+            @media screen and (max-width: 1299px) {
+                display: none;
+            }
+        }
+    }
+}
+
 .blog-card {
     &:hover,
     &:focus-within
@@ -109,6 +116,6 @@
 
     &:focus-within {
         outline: 2px solid $color-secondary-light;
-        outline-offset: 5px;
+        outline-offset: -2px;
     }
 }
