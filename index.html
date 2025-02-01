@@ -36,6 +36,12 @@
 	<!-- All CSS -->
 	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
 	<link rel="stylesheet" href="./assets/plugins/bootstrap/css/bootstrap.min.css" />
+
+	<!-- ========= Just for current page link | Don't include this to other pages ========== -->
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+	<!-- ==== current page link End ==== -->
+
+	 <!-- All CSS -->
 	<link rel="stylesheet" href="./assets/css/style.min.css" />
 </head>
 <body>
@@ -70,9 +76,45 @@
 	</header>
 
 	<!-- Section Banner -->
-	<section class="section-banner section-gap bg-primary">
-		<div class="container">
-			<h1 class="display-2 text-white">Banner</h1>
+	<section class="section-home-banner bg-primary text-white position-relative">
+		<div class="swiper" data-swiper="banner-slider">
+			<div class="swiper-wrapper">
+				<div class="swiper-slide">
+					<div class="section-home-banner__card h-100 d-flex align-items-center section-gap position-relative z-0">
+						<img class="u-cover" src="./assets/images/pages/home/banner-bg.png" alt="banner background" height="416" loading="eager" fetchpriority="high" decoding="sync" />
+						<div class="container">
+							<h1 class="section-home-banner__card__title display-2">Construction Litigation Consulting</h1>
+							<p class="section-home-banner__card__text fs-4 mt-3 mb-4">100% Success Rate of a Favorable Verdict or Settlement</p>
+							<a href="#section-contact" class="btn btn-primary">Learn More</a>
+						</div>
+					</div>
+				</div>
+				<div class="swiper-slide">
+					<div class="section-home-banner__card h-100 d-flex align-items-center section-gap position-relative z-0">
+						<img class="u-cover" src="./assets/images/pages/about/banner-bg.png" alt="banner background" height="416" loading="lazy" fetchpriority="low" decoding="async" />
+						<div class="container">
+							<h1 class="section-home-banner__card__title display-2">About Us</h1>
+							<p class="section-home-banner__card__text fs-4 mt-3 mb-4">100% Success Rate of a Favorable Verdict or Settlement</p>
+							<a href="./about.html" class="btn btn-primary">Learn More</a>
+						</div>
+					</div>
+				</div>
+				<div class="swiper-slide">
+					<div class="section-home-banner__card h-100 d-flex align-items-center section-gap position-relative z-0">
+						<img class="u-cover" src="./assets/images/pages/services/banner-bg.png" alt="banner background" height="416" loading="lazy" fetchpriority="low" decoding="async" />
+						<div class="container">
+							<h1 class="section-home-banner__card__title display-2">Services</h1>
+							<p class="section-home-banner__card__text fs-4 mt-3 mb-4">100% Success Rate of a Favorable Verdict or Settlement</p>
+							<a href="./services.html" class="btn btn-primary">Learn More</a>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="section-home-banner__pagination position-absolute bottom-0 z-2 w-100 pb-5">
+				<div class="container">
+					<div class="swiper-pagination position-static text-start"></div>
+				</div>
+			</div>
 		</div>
 	</section>
 
@@ -88,6 +130,75 @@
 						<h2 class="section-home-about__title fs-3 fw-normal ff-primary mb-4">Z Solutions founder Alan Zirkelbach brings 40+ years of construction experience that includes building more than 10 million square feet through 1,500+ projects to construction litigation consulting.</h2>
 						<a href="#!" class="btn btn-primary">Learn More</a>
 					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<!-- Section Home Services -->
+	<section class="section-home-services section-gap pb-0 position-relative z-0">
+		<div class="container">
+			<h2 class="display-5 text-primary fw-normal text-center mb-4 mb-md-5">Our Services</h2>
+			<div class="row match-height">
+				<div class="col-lg-4 col-md-6 mb-3 mb-lg-0">
+					<article class="service-card d-flex flex-column position-relative">
+						<figure class="service-card__head ratio ratio-4x3">
+							<img src="./assets/images/pages/home/service-1.png" alt="service preview" height="312" loading="lazy" fetchpriority="low" decoding="async" />
+						</figure>
+						<figcaption class="service-card__body flex-grow-1 d-flex flex-column align-items-center bg-white p-4 pb-xxl-5 text-center">
+							<h3 class="service-card__title fs-5 fw-normal text-uppercase">Z SOLUTION MOBILE LAB</h3>
+							<p class="service-card__text">The Z Solution Mobile Lab is a fully equipped, state-of-the-art unit for both destructive and non-destructive testing, complete with a conference space for result reviews and in-depth analysis.</p>
+							<a href="#!" class="btn btn-primary mt-auto">Learn More</a>
+						</figcaption>
+					</article>
+				</div>
+				<div class="col-lg-4 col-md-6 mb-3 mb-lg-0">
+					<article class="service-card d-flex flex-column position-relative">
+						<figure class="service-card__head ratio ratio-4x3">
+							<img src="./assets/images/pages/home/service-2.png" alt="service preview" height="312" loading="lazy" fetchpriority="low" decoding="async" />
+						</figure>
+						<figcaption class="service-card__body flex-grow-1 d-flex flex-column align-items-center bg-white p-4 pb-xxl-5 text-center">
+							<h3 class="service-card__title fs-5 fw-normal text-uppercase">EXPERT TESTIMONY</h3>
+							<p class="service-card__text">With 30+ years of construction experience and a Harvard M.B.A., Alan Zirkelbach provides expert testimony that brings unmatched clarity and credibility to complex construction litigation.</p>
+							<a href="#!" class="btn btn-primary mt-auto">Learn More</a>
+						</figcaption>
+					</article>
+				</div>
+				<div class="col-lg-4 col-md-6 mb-3 mb-lg-0">
+					<article class="service-card d-flex flex-column position-relative">
+						<figure class="service-card__head ratio ratio-4x3">
+							<img src="./assets/images/pages/home/service-3.png" alt="service preview" height="312" loading="lazy" fetchpriority="low" decoding="async" />
+						</figure>
+						<figcaption class="service-card__body flex-grow-1 d-flex flex-column align-items-center bg-white p-4 pb-xxl-5 text-center">
+							<h3 class="service-card__title fs-5 fw-normal text-uppercase">LEGAL REPORTS</h3>
+							<p class="service-card__text">At Z Solution, each legal report is custom-built from the ground up, ensuring precise, case-specific analysis for construction disputes that excludes the shortcuts of recycled content.</p>
+							<a href="#!" class="btn btn-primary mt-auto">Learn More</a>
+						</figcaption>
+					</article>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<!-- Section Statistics -->
+	<section data-trigger="counter" class="section-statistics section-gap bg-tertiary text-white text-center">
+		<div class="container">
+			<div class="section-statistics__grid">
+				<div class="section-statistics__card bg-tertiary p-3 p-lg-0">
+					<h2 class="display-5"><span data-target="count">100</span>%</h2>
+					<p class="mb-0">Success Rate for Clients</p>
+				</div>
+				<div class="section-statistics__card bg-tertiary p-3 p-lg-0">
+					<h3 class="display-5"><span data-target="count">40</span>+</h3>
+					<p class="mb-0">Years in Construction</p>
+				</div>
+				<div class="section-statistics__card bg-tertiary p-3 p-lg-0">
+					<h3 class="display-5"><span data-target="count">1,500</span>+</h3>
+					<p class="mb-0">Projects</p>
+				</div>
+				<div class="section-statistics__card bg-tertiary p-3 p-lg-0">
+					<h3 class="display-5"><span data-target="count">10</span>M+</h3>
+					<p class="mb-0">Square Feet Built</p>
 				</div>
 			</div>
 		</div>
@@ -112,7 +223,7 @@
 									<i class="bi bi-person-fill text-tertiary"></i> By Admin
 								</span>
 							</div>
-							<h3 class="fs-5 fw-normal my-2">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</h3>
+							<h3 class="blog-card__title  fs-5 fw-normal my-2">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</h3>
 							<a href="#!" class="btn text-secondary p-2 ps-0 stretched-link">Read More <i class="bi bi-arrow-right"></i></a>
 						</figcaption>
 					</article>
@@ -131,7 +242,7 @@
 									<i class="bi bi-person-fill text-tertiary"></i> By Admin
 								</span>
 							</div>
-							<h3 class="fs-5 fw-normal my-2">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</h3>
+							<h3 class="blog-card__title fs-5 fw-normal my-2">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</h3>
 							<a href="#!" class="btn text-secondary p-2 ps-0 stretched-link">Read More <i class="bi bi-arrow-right"></i></a>
 						</figcaption>
 					</article>
@@ -150,7 +261,7 @@
 									<i class="bi bi-person-fill text-tertiary"></i> By Admin
 								</span>
 							</div>
-							<h3 class="fs-5 fw-normal my-2">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</h3>
+							<h3 class="blog-card__title fs-5 fw-normal my-2">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</h3>
 							<a href="#!" class="btn text-secondary p-2 ps-0 stretched-link">Read More <i class="bi bi-arrow-right"></i></a>
 						</figcaption>
 					</article>
@@ -351,5 +462,64 @@
 	<script src="./assets/plugins/jquery/jquery-3.6.4.min.js"></script>
 	<script src="./assets/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
 	<script src="./assets/js/script.js" defer></script>
+
+	<!--
+		=========
+		Just for current page scripts | Don't include this to other pages
+		==========
+	-->
+	<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+	<script defer>
+		$(document).ready(function () {
+			/* Banner Slider Functions */
+			new Swiper('[data-swiper="banner-slider"]', {
+				rewind: true,
+				pagination: {
+					clickable: true,
+					el: ".swiper-pagination",
+				},
+				autoplay: {
+					delay: 8000,
+					disableOnInteraction: false,
+				},
+				keyboard: {
+					enabled: true,
+				},
+			});
+			
+			/* jQuery Counter Up Functions */
+			function commaSeparateNumber(num) {
+				return num.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+			};
+			function startCounter() {
+				let scrollY = (window.pageYOffset || document.documentElement.scrollTop) + window.innerHeight;
+				let divPos = $('[data-trigger="counter"]').get(0).offsetTop;
+				if (scrollY > divPos) {
+					$(window).off("scroll", startCounter);
+					$('[data-target="count"]').each(function () {
+						var $this = $(this);
+						jQuery({
+							Counter: 0,
+						}).animate(
+							{
+								Counter: $this.text().replace(/,/g, ""),
+							},
+							{
+								duration: 1500,
+								easing: "swing",
+								step: function () {
+									$this.text(commaSeparateNumber(Math.floor(this.Counter)));
+								},
+								complete: function () {
+									$this.text(commaSeparateNumber(this.Counter));
+								},
+							}
+						);
+					});
+				}
+			};
+			$(window).scroll(startCounter);
+		});
+	</script>
 </body>
 </html>

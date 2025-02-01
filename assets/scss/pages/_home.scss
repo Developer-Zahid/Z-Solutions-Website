@@ -1,8 +1,108 @@
 @use '../abstracts' as *;
 
+/* Section Home banner Style */
+.section-home-banner {
+    .swiper-slide {
+        height: auto;
+    }
+
+    &__card {
+        min-height: calc(90vh - var(--header-size));
+
+        &__title {
+            max-width: 15ch;
+        }
+
+        &__text {
+            max-width: 24ch;
+        }
+    }
+
+    &__pagination {
+        --swiper-theme-color: #{$color-secondary};
+        --swiper-pagination-bullet-inactive-color: #ffffff;
+        --swiper-pagination-bullet-inactive-opacity: 1;
+        --swiper-pagination-bullet-border-radius: 0;
+        --swiper-pagination-bullet-horizontal-gap: #{toRem(8)};
+
+        .swiper-pagination-bullet-active {
+            outline: 1px solid #fff;
+            outline-offset: 3px;
+          }
+    }
+}
+
 /* Section Home About Style */
 .section-home-about {
     &__title {
         max-width: 31ch;
+    }
+}
+
+/* Section Home Services Style */
+.section-home-services {
+    background-color: #e5e7f3;
+
+    &::after {
+        @extend %common-pseudo;
+        height: toRem(105);
+        background-color: $color-tertiary;
+        width: 100%;
+        bottom: 0;
+        display: block;
+        z-index: -1;
+    }
+}
+.service-card {
+    box-shadow: 0 0 toRem(30) rgba($color: #001189, $alpha: 0.2);
+
+    &__head {
+        &::after {
+            @extend %common-pseudo;
+            height: toRem(30);
+            background-color: $color-tertiary;
+            width: 100%;
+            bottom: 0;
+            display: block;
+            clip-path: polygon(0 100%, 100% 0, 100% 100%);
+        }
+    }
+
+    &__title {
+        color: #333333;
+    }
+}
+
+/* Section Statistics Style */
+.section-statistics {
+
+    &__grid {
+        display: grid;
+        gap: 1px;
+        background-color: #dedede;
+
+        @include min-sm {
+            grid-template-columns: 1fr 1fr;
+        }
+
+        @include min-lg {
+            grid-template-columns: 1fr 1fr 1fr 1fr;
+        }
+    }
+}
+
+/* Section Home Blog Style */
+.blog-card {
+    &:hover,
+    &:focus-within
+    {
+        .blog-card__title {
+            color: $color-tertiary;
+        }
+    }
+
+    &:focus-within {
+        outline: 2px solid $color-secondary-light;
+        outline-offset: 5px;
     }
 }

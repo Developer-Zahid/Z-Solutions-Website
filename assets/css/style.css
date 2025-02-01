@@ -52,7 +52,7 @@ select:not(:disabled) {
   height: 100%;
 }
 
-.section-about__media::before, .section-common-banner__title::after, .footer__block__title::after {
+.section-about__media::before, .section-home-services::after, .service-card__head::after, .section-common-banner__title::after, .footer__block__title::after {
   content: "";
   position: absolute;
 }
@@ -148,14 +148,9 @@ img {
 
 /* Common Section Gap Style */
 .section-gap {
-  --_section-gap: 1.875rem;
+  --_section-gap: 3.125rem;
   padding-top: var(--_section-gap);
   padding-bottom: var(--_section-gap);
-}
-@media (min-width: 992px) {
-  .section-gap {
-    --_section-gap: 3.125rem;
-  }
 }
 @media (min-width: 1200px) {
   .section-gap {
@@ -466,9 +461,89 @@ select:focus {
   display: block;
 }
 
+/* Section Home banner Style */
+.section-home-banner .swiper-slide {
+  height: auto;
+}
+.section-home-banner__card {
+  min-height: calc(90vh - var(--header-size));
+}
+.section-home-banner__card__title {
+  max-width: 15ch;
+}
+.section-home-banner__card__text {
+  max-width: 24ch;
+}
+.section-home-banner__pagination {
+  --swiper-theme-color: var(--bs-secondary);
+  --swiper-pagination-bullet-inactive-color: #ffffff;
+  --swiper-pagination-bullet-inactive-opacity: 1;
+  --swiper-pagination-bullet-border-radius: 0;
+  --swiper-pagination-bullet-horizontal-gap: 0.5rem;
+}
+.section-home-banner__pagination .swiper-pagination-bullet-active {
+  outline: 1px solid #fff;
+  outline-offset: 3px;
+}
+
 /* Section Home About Style */
 .section-home-about__title {
   max-width: 31ch;
+}
+
+/* Section Home Services Style */
+.section-home-services {
+  background-color: #e5e7f3;
+}
+.section-home-services::after {
+  height: 6.5625rem;
+  background-color: var(--bs-tertiary);
+  width: 100%;
+  bottom: 0;
+  display: block;
+  z-index: -1;
+}
+
+.service-card {
+  box-shadow: 0 0 1.875rem rgba(0, 17, 137, 0.2);
+}
+.service-card__head::after {
+  height: 1.875rem;
+  background-color: var(--bs-tertiary);
+  width: 100%;
+  bottom: 0;
+  display: block;
+  -webkit-clip-path: polygon(0 100%, 100% 0, 100% 100%);
+          clip-path: polygon(0 100%, 100% 0, 100% 100%);
+}
+.service-card__title {
+  color: #333333;
+}
+
+/* Section Statistics Style */
+.section-statistics__grid {
+  display: grid;
+  gap: 1px;
+  background-color: #dedede;
+}
+@media (min-width: 576px) {
+  .section-statistics__grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+@media (min-width: 992px) {
+  .section-statistics__grid {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+  }
+}
+
+/* Section Home Blog Style */
+.blog-card:hover .blog-card__title, .blog-card:focus-within .blog-card__title {
+  color: var(--bs-tertiary);
+}
+.blog-card:focus-within {
+  outline: 2px solid var(--bs-secondary-light);
+  outline-offset: 5px;
 }
 
 /* Section About Us Style */

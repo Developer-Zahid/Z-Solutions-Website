@@ -84,10 +84,8 @@ img{
 
 /* Common Section Gap Style */
 .section-gap{
-	--_section-gap: #{toRem(30)};
-	@include min-lg{
-		--_section-gap: #{toRem(50)};
-	}
+	--_section-gap: #{toRem(50)};
+	
 	@include min-xl{
 		--_section-gap: #{toRem(80)};
 	}
