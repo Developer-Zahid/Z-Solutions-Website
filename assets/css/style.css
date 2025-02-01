@@ -22,7 +22,7 @@ Version: 1.00
   --bs-border-radius: 0;
 }
 
-.footer__copyright__link, .navbar-toggler {
+.navbar-toggler {
   transition: all ease-in-out 0.25s;
 }
 
@@ -426,11 +426,10 @@ select:focus {
   gap: 0.5rem;
   margin-bottom: 0.5rem;
 }
-.footer__copyright {
-  font-size: 0.875rem;
-}
-.footer__copyright__link:hover, .footer__copyright__link:focus {
-  text-decoration: underline;
+@media (max-width: 767.98px) {
+  .footer__bottom {
+    font-size: 0.875rem;
+  }
 }
 
 /* Section CTA Style */
@@ -466,7 +465,14 @@ select:focus {
   height: auto;
 }
 .section-home-banner__card {
-  min-height: calc(90vh - var(--header-size));
+  min-height: calc(80vh - var(--header-size));
+  min-height: calc(80svh - var(--header-size));
+}
+@media (min-width: 576px) {
+  .section-home-banner__card {
+    min-height: calc(90vh - var(--header-size));
+    min-height: calc(90svh - var(--header-size));
+  }
 }
 .section-home-banner__card__title {
   max-width: 15ch;

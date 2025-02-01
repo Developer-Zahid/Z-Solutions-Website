@@ -26,6 +26,7 @@
     	$('.header-height-fix').css('height', $('header').innerHeight() +'px')
     	$('body').css('--header-size', $('header').innerHeight() +'px')
 	}
+	headerHeightFixer();
 
 	/* Get Current Year */
 	$('[data-target="currentYear"]').text(new Date().getFullYear());
