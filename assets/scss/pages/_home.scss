@@ -1,0 +1,8 @@
+@use '../abstracts' as *;
+
+/* Section Home About Style */
+.section-home-about {
+    &__title {
+        max-width: 31ch;
+    }
+}

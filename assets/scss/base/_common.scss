@@ -70,8 +70,16 @@ img{
 	}
 }
 
+.text-tertiary {
+	color: $color-tertiary;
+}
+
 .bg-tertiary {
 	background-color: $color-tertiary;
+}
+
+.ff-primary {
+	font-family: $font-primary;
 }
 
 /* Common Section Gap Style */

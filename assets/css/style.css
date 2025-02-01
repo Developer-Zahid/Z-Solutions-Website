@@ -134,8 +134,16 @@ img {
   font-size: 1rem;
 }
 
+.text-tertiary {
+  color: var(--bs-tertiary);
+}
+
 .bg-tertiary {
   background-color: var(--bs-tertiary);
+}
+
+.ff-primary {
+  font-family: var(--bs-body-font-family);
 }
 
 /* Common Section Gap Style */
@@ -456,6 +464,11 @@ select:focus {
   height: clamp(0.3rem, 0.3051vw + 0.2256rem, 0.5rem);
   background-color: var(--bs-secondary);
   display: block;
+}
+
+/* Section Home About Style */
+.section-home-about__title {
+  max-width: 31ch;
 }
 
 /* Section About Us Style */
